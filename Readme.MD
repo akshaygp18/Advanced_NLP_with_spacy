@@ -1,7 +1,7 @@
 # Nlp from scratch
 NLP from scratch
 
-# Commands using -
+## Commands using -
 
 ### Importing the spacy package
 ```
