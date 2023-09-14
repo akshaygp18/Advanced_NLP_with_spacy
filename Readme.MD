@@ -108,3 +108,51 @@ doc = nlp("¿Cómo estás?")
 print(doc.text)
 
 ```
+
+## Inside documents_spans_tokens_file
+```
+Processing Text and Selecting Tokens with spaCy
+
+This repository demonstrates how to use spaCy, a popular natural language processing library, to process text and select specific tokens from a document. The code is divided into two parts:
+
+Part 1: Selecting the First Token
+
+In this part, we create an English spaCy NLP object using spacy.blank("en"). Then, we process a text and create a Doc object. Finally, we select and print the text of the first token in the document.
+
+# Import spaCy and create the English NLP object
+import spacy
+
+nlp = spacy.blank("en")
+
+# Process the text
+doc = nlp("I like tree kangaroos and narwhals.")
+
+# Select the first token
+first_token = doc[0]
+
+# Print the first token's text
+print(first_token.text)
+
+Part 2: Selecting Token Slices
+
+In this part, we again create an English spaCy NLP object using spacy.blank("en"), process a text, and create a Doc object. We demonstrate how to select slices of tokens from the document.
+
+We create a slice of the Doc for the tokens "tree kangaroos" and print its text.
+We create a slice of the Doc for the tokens "tree kangaroos and narwhals" (excluding the period) and print its text.
+
+# Import spaCy and create the English NLP object
+import spacy
+
+nlp = spacy.blank("en")
+
+# Process the text
+doc = nlp("I like tree kangaroos and narwhals.")
+
+# A slice of the Doc for "tree kangaroos"
+tree_kangaroos = doc[2:4]
+print(tree_kangaroos.text)
+
+# A slice of the Doc for "tree kangaroos and narwhals" (without the ".")
+tree_kangaroos_and_narwhals = doc[2:6]
+print(tree_kangaroos_and_narwhals.text)
+```
