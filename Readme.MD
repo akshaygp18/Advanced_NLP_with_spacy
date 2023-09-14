@@ -51,7 +51,7 @@ print("like_num:  ", [token.like_num for token in doc])
 
 ```
 
-### Inside_getting_started_file
+## Inside_getting_started_file
 ```
  Blank SpaCy NLP Objects for Multiple Languages
 
