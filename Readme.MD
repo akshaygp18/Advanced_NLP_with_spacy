@@ -157,7 +157,7 @@ tree_kangaroos_and_narwhals = doc[2:6]
 print(tree_kangaroos_and_narwhals.text)
 ```
 
-### Inside lexical_attributes_file
+## Inside lexical_attributes_file
 ```
 Finding Percentages in Text Using spaCy
 
