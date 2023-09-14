@@ -156,3 +156,49 @@ print(tree_kangaroos.text)
 tree_kangaroos_and_narwhals = doc[2:6]
 print(tree_kangaroos_and_narwhals.text)
 ```
+
+### Inside lexical_attributes_file
+```
+Finding Percentages in Text Using spaCy
+
+This code demonstrates how to use spaCy to find percentages in a text by iterating through tokens in a document. Specifically, it looks for two subsequent tokens: a number and a percent sign ("%").
+
+Steps:
+
+Initialize spaCy:
+We start by initializing a blank spaCy NLP object for the English language (en).
+
+import spacy
+
+nlp = spacy.blank("en")
+
+Process the Text:
+Next, we process the input text using the spaCy NLP object, creating a Doc object.
+
+doc = nlp("In 1990, more than 60% of people in East Asia were in extreme poverty. "
+    "Now less than 4% are.")
+
+Iterate Over Tokens:
+We then iterate over each token in the Doc object to analyze its content.
+
+for token in doc:
+
+Check for Numbers:
+For each token, we check if it resembles a number using the like_num token attribute.
+
+if token.like_num:
+
+Check for the Next Token:
+If a token resembles a number, we get the next token in the document by accessing the doc[token.i + 1] position.
+
+next_token = doc[token.i + 1]
+
+Check for the Percent Sign:
+Finally, we check if the next token's text attribute is equal to the percent sign "%". If it is, we print the percentage found.
+
+if next_token.text == "%":
+    print("Percentage found:", token.text)
+
+This code is useful for extracting percentages from text data where percentages are represented as numbers followed by a percent symbol. It leverages spaCy's token attributes and object-oriented structure to efficiently process and extract this information from text.
+```
+
