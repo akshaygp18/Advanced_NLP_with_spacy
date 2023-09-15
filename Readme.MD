@@ -244,3 +244,26 @@ The correct answer is:
 Explanation: Trained pipelines allow you to generalize based on a set of training examples. Once they’re trained, they use binary weights to make predictions. That’s why it’s not necessary to ship them with their training data.
 ```
 
+## Inside Loading_pipeline_file
+```
+
+1. Import the spaCy library at the beginning of your Python script:
+
+import spacy
+
+Load the "en_core_web_sm" pipeline using spacy.load():
+nlp = spacy.load("en_core_web_sm")
+
+This step loads the small English pipeline for natural language processing.
+Define the text you want to process:
+text = "It's official: Apple is the first U.S. public company to reach a $1 trillion market value"
+Replace this text with your own if needed.
+
+Process the text using the loaded pipeline:
+doc = nlp(text)
+This step tokenizes and analyzes the input text, creating a doc object.
+
+Access and print the document text:
+print(doc.text)
+This will display the processed document text.
+```
