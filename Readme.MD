@@ -202,3 +202,19 @@ if next_token.text == "%":
 This code is useful for extracting percentages from text data where percentages are represented as numbers followed by a percent symbol. It leverages spaCy's token attributes and object-oriented structure to efficiently process and extract this information from text.
 ```
 
+## Inside Trained_pipelines_file
+```
+# NLP with spaCy
+
+This Python code showcases spaCy for natural language processing tasks:
+
+- **Part-of-Speech Tagging**: Identifying parts of speech in text.
+- **Syntactic Dependency Prediction**: Predicting word dependencies.
+- **Named Entity Recognition**: Extracting named entities.
+- **spacy.explain Method**: Getting tag and label explanations.
+
+See code examples in the respective sections below.
+
+```
+
+
