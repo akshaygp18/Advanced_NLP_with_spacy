@@ -267,3 +267,36 @@ Access and print the document text:
 print(doc.text)
 This will display the processed document text.
 ```
+
+## Inside Predicting_linguistic_annotation_file
+```
+
+Part 1:
+Import the spaCy library and load the "en_core_web_sm" model, which is a small English language model.
+
+Define a sample text.
+
+Process the text using the loaded spaCy model, creating a doc object.
+
+Iterate over each token in the doc and print:
+
+token_text: The text of the token.
+token_pos: The part-of-speech (POS) tag of the token.
+token_dep: The dependency label of the token.
+This loop provides information about the grammatical properties of each word in the text.
+
+Part 2:
+Import spaCy and load the "en_core_web_sm" model (if not already loaded).
+
+Define a different sample text.
+
+Process the text using spaCy, creating a doc object.
+
+Iterate over the entities recognized in the text (entities are typically named entities like names, dates, organizations, etc.) using doc.ents.
+
+Print each entity's:
+
+ent.text: The text of the entity.
+ent.label_: The label or category of the entity (e.g., ORGANIZATION, DATE, etc.).
+This loop extracts and prints named entities and their corresponding labels from the text.
+```
