@@ -300,3 +300,28 @@ ent.text: The text of the entity.
 ent.label_: The label or category of the entity (e.g., ORGANIZATION, DATE, etc.).
 This loop extracts and prints named entities and their corresponding labels from the text.
 ```
+
+## Inside predicting_named_entities_in_context_file
+```
+
+Part 1: Processing Text and Extracting Entities
+
+Import the spaCy library and load the "en_core_web_sm" model, which is a small English language model.
+
+Define a sample text containing information about an iPhone X release.
+
+Process the text using the spaCy model, creating a doc object.
+
+Iterate over the entities recognized in the text using doc.ents.
+
+For each entity, print the entity text and its label.
+
+Part 2: Manually Creating a Span for Missing Entity
+
+The model didn't recognize "iPhone X" as an entity. To handle this, create a span manually by slicing the doc object from the start token (1st token) to the end token (3rd token) that should constitute the entity "iPhone X."
+
+Print the text of the manually created span.
+
+Note: Models are statistical and not always perfect; their predictions depend on the training data and the specific text being processed. In this case, the model missed the "iPhone X" entity, but you can manually create spans to address such cases.
+```
+
